@@ -56,6 +56,9 @@ importers:
 
   apps/web:
     dependencies:
+      cubelib:
+        specifier: workspace:*
+        version: link:../../packages/cubelib
       next:
         specifier: ^13.1.1
         version: 13.1.1(@babel/core@7.0.0)(react-dom@18.2.0)(react@18.2.0)
@@ -93,6 +96,21 @@ importers:
       typescript:
         specifier: ^4.5.3
         version: 4.7.4
+
+  packages/cubelib:
+    devDependencies:
+      eslint:
+        specifier: ^7.32.0
+        version: 7.32.0
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../eslint-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: ^4.9.0
+        version: 4.9.3
 
   packages/eslint-config-custom:
     dependencies:
@@ -2369,6 +2387,12 @@ packages:
     resolution: {integrity: sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==}
     engines: {node: '>=4.2.0'}
     hasBin: true
+
+  /typescript@4.9.3:
+    resolution: {integrity: sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
 
   /unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
