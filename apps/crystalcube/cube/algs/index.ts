@@ -1,14 +1,26 @@
-interface AlgSheet {
+interface SingleAlgSet {
   name: string;
   description?: string;
   puzzle: PuzzleName;
   stage: string; // e.g. OLL
-  cases: Array<Case>;
+  cases: Array<AlgCase>;
 }
+
+function isSingleAlgSet(algSet: AlgSet): algSet is SingleAlgSet {
+  return "cases" in algSet;
+}
+
+type AlgSet =
+  | SingleAlgSet
+  | {
+      name: string;
+      description?: string;
+      sets: Array<AlgSet>;
+    };
 
 type PuzzleName = "3x3x3" | "megaminx";
 
-interface Case {
+interface AlgCase {
   name: string;
   display: string;
   categories?: Array<string>;
@@ -23,4 +35,5 @@ interface Solution {
   postAdjust?: string;
 }
 
-export type { AlgSheet, PuzzleName, Case, Solution };
+export type { SingleAlgSet, AlgSet, PuzzleName, AlgCase, Solution };
+export { isSingleAlgSet };
