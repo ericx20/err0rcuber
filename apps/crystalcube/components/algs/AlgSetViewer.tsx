@@ -25,14 +25,14 @@ export const AlgSetViewer = ({ algSet }: AlgSetViewerProps) => {
       <p>{algSet.description}</p>
       <Tabs>
         <TabList>
-          {algSet.sets.map((set) => (
-            <Tab>{set.name}</Tab>
+          {algSet.subsets.map((subset) => (
+            <Tab>{subset.name}</Tab>
           ))}
         </TabList>
         <TabPanels>
-          {algSet.sets.map((set) => (
+          {algSet.subsets.map((subset) => (
             <TabPanel>
-              <AlgSetViewer algSet={set} />
+              <AlgSetViewer algSet={subset} />
             </TabPanel>
           ))}
         </TabPanels>

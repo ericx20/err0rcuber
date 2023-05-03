@@ -16,6 +16,9 @@ importers:
 
   apps/crystalcube:
     dependencies:
+      '@chakra-ui/icons':
+        specifier: ^2.0.18
+        version: 2.0.18(@chakra-ui/system@2.5.5)(react@18.2.0)
       '@chakra-ui/react':
         specifier: ^2.5.5
         version: 2.5.5(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.22)(framer-motion@10.11.2)(react-dom@18.2.0)(react@18.2.0)
@@ -43,6 +46,9 @@ importers:
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
+      react-icons:
+        specifier: ^4.8.0
+        version: 4.8.0(react@18.2.0)
       ui:
         specifier: workspace:*
         version: link:../../packages/ui
@@ -850,6 +856,17 @@ packages:
       react: '>=18'
     dependencies:
       '@chakra-ui/shared-utils': 2.0.5
+      '@chakra-ui/system': 2.5.5(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(react@18.2.0)
+      react: 18.2.0
+    dev: false
+
+  /@chakra-ui/icons@2.0.18(@chakra-ui/system@2.5.5)(react@18.2.0):
+    resolution: {integrity: sha512-E/+DF/jw7kdN4/XxCZRnr4FdMXhkl50Q34MVwN9rADWMwPK9uSZPGyC7HOx6rilo7q4bFjYDH3yRj9g+VfbVkg==}
+    peerDependencies:
+      '@chakra-ui/system': '>=2.0.0'
+      react: '>=18'
+    dependencies:
+      '@chakra-ui/icon': 3.0.16(@chakra-ui/system@2.5.5)(react@18.2.0)
       '@chakra-ui/system': 2.5.5(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(react@18.2.0)
       react: 18.2.0
     dev: false
@@ -4912,6 +4929,14 @@ packages:
       react-clientside-effect: 1.2.6(react@18.2.0)
       use-callback-ref: 1.3.0(@types/react@18.0.22)(react@18.2.0)
       use-sidecar: 1.1.2(@types/react@18.0.22)(react@18.2.0)
+    dev: false
+
+  /react-icons@4.8.0(react@18.2.0):
+    resolution: {integrity: sha512-N6+kOLcihDiAnj5Czu637waJqSnwlMNROzVZMhfX68V/9bu9qHaMIJC4UdozWoOk57gahFCNHwVvWzm0MTzRjg==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-is@16.13.1:

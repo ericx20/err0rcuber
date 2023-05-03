@@ -15,7 +15,7 @@ type AlgSet =
   | {
       name: string;
       description?: string;
-      sets: Array<AlgSet>;
+      subsets: Array<AlgSet>;
     };
 
 type PuzzleName = "3x3x3" | "megaminx";
@@ -30,9 +30,10 @@ interface AlgCase {
 
 interface Solution {
   alg: string;
-  tags?: Array<string>;
+  labels?: Array<string>;
   preAdjust?: string;
   postAdjust?: string;
+  notes?: string;
 }
 
 export type { SingleAlgSet, AlgSet, PuzzleName, AlgCase, Solution };

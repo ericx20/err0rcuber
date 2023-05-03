@@ -4,7 +4,7 @@ import type { AlgSet } from "..";
 export const TwoLookOLL: AlgSet = {
   name: "2 Look OLL",
   description: "hello world",
-  sets: [
+  subsets: [
     {
       name: "OLL Step 1",
       description: "Twist the edges to form a cross on top",
@@ -42,6 +42,32 @@ export const TwoLookOLL: AlgSet = {
             {
               alg: "f R U R' U' f'",
               preAdjust: "U2",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "OLL Step 2",
+      description: "Twist the corners to make the top one colour",
+      puzzle: "3x3x3",
+      stage: "OCLL",
+      cases: [
+        {
+          name: "T",
+          display: "r U R' U' r' F R F'",
+          solutions: [
+            {
+              alg: "r U R' U' r' F R F'",
+            },
+          ],
+        },
+        {
+          name: "",
+          display: "",
+          solutions: [
+            {
+              alg: "",
             },
           ],
         },
